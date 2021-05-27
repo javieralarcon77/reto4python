@@ -1,5 +1,5 @@
 def menuProductos():
-    opc = 6    
+    opc = 7    
     while opc > 6:
         print('')
         print('Agregar Productos')
@@ -30,6 +30,22 @@ def mainProductos(productos:list):
                     msg = 'El producto si existe'
             
             print( msg )
-                
+
+        if opc == 4: #actualizar
+            search = input('Ingrese el nombre del producto a buscar')
+
+            encontro = False
+            for i in range( len( productos ) ):
+                if( productos[i] == search ):
+                    new = input("Ingrese el nuevo nombre")
+                    productos[i] = new
+                    print('Producto actualizado con exito')
+                    print('')
+                    encontro = True
+
+            if encontro == False:
+                print( "El producto ingresado no existe" )
+        
+
         opc = menuProductos()
     
