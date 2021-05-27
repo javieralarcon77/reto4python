@@ -22,6 +22,14 @@ def mainProductos(productos:list):
         if opc == 2: #listar
             print(productos)
 
-      
+        if opc == 3: #consultar
+            search = input('Ingrese el nombre del producto a buscar')
+            msg = 'No esta el producto'
+            for producto in productos:
+                if( producto == search ):
+                    msg = 'El producto si existe'
+            
+            print( msg )
+                
         opc = menuProductos()
     
