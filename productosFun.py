@@ -31,6 +31,9 @@ def mainProductos(productos:list):
             
             print( msg )
 
+
+            
+
         if opc == 4: #actualizar
             search = input('Ingrese el nombre del producto a buscar')
 
